@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-
+import * as S from './styles'
 export default function StopWatch() {
 
         const [time, setTime] = useState(0);
@@ -40,14 +40,16 @@ export default function StopWatch() {
         },[cronosOn])
 
   return (
-    <div>
+<S.StopWatch>
         <h1>
             <span>{("0" + Math.floor((time / 60000) % 60)).slice(-2)}:</span>
             <span>{("0" + Math.floor((time / 1000) % 60)).slice(-2)}:</span>
             <span>{("0" + ((time / 10) % 100)).slice(-2)}</span>
         </h1>
-        <button onClick={() => Cronos(cronosOn)}>{text}</button>
-        <button onClick={() => setTime(0)}>RESET</button>
-    </div>
+        <S.divButtons>
+        <S.StopWatchButton onClick={() => Cronos(cronosOn)}>{text}</S.StopWatchButton>
+        <S.StopWatchButton onClick={() => setTime(0)}>RESET</S.StopWatchButton>
+        </S.divButtons>
+</S.StopWatch>
   )
 }

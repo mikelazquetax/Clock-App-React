@@ -1,4 +1,5 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect} from 'react';
+import * as S from "./styles"
 
 export default function CountDown() {
     const [sanFerminDays, setSanFerminDays] = useState("")
@@ -24,9 +25,6 @@ export default function CountDown() {
       ${diffMins} Minutos y ${diffSecs} Segundos Para los San Fermines  `)
     }
     
-
-
-
     useEffect(() =>{
       const runningClock = setInterval(() => daysCalc(), 1000)
       return function clean(){
@@ -34,12 +32,10 @@ export default function CountDown() {
       }
     },[sanFerminDays])
 
- 
-
   return (
-    <div>
+  <S.SFstyles>
     
     <h1>{sanFerminDays}</h1>
-    </div>
+    </S.SFstyles>
   )
 }
