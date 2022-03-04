@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const currentTime = styled.div`
 display:flex;
 justify-content:center;
-width: fit-content;
+width: 35%;
 @media (max-width : 500px) {
     width: 90%
 }
@@ -18,6 +18,7 @@ padding: 60px 0px;
 color:white
 `
 export const variables = styled.p`
+
 margin-inline: 20px;
 @media (max-width : 500px) {
     font-size: 20px
