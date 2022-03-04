@@ -6,7 +6,10 @@ export const HeaderSty = styles.div`
  height: 100px;
  text-align: center;
  align-items: center;
- margin: auto
+ margin: auto;
+ @media (max-width: 500px){
+     width:100%
+ }
 `
 export const Headertitle = styles.h1`
 padding-top: 30px;

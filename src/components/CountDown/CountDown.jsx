@@ -35,7 +35,7 @@ export default function CountDown() {
   return (
   <S.SFstyles>
     
-    <h1>{sanFerminDays}</h1>
+    <S.SFtitle>{sanFerminDays}</S.SFtitle>
     </S.SFstyles>
   )
 }

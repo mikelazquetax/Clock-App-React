@@ -4,6 +4,9 @@ export const currentTime = styled.div`
 display:flex;
 justify-content:center;
 width: fit-content;
+@media (max-width : 500px) {
+    width: 90%
+}
 margin:auto;
 font-family: 'Montserrat', 'sans-serif';
 border-radius:10px;
@@ -16,6 +19,9 @@ color:white
 `
 export const variables = styled.p`
 margin-inline: 20px;
+@media (max-width : 500px) {
+    font-size: 20px
+}
 font-weight: bold;
 font-size: 40px;
 display:flex;
