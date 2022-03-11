@@ -76,7 +76,9 @@ export default function Clock() {
     };
   });
   return (
+
     <S.currentTime>
+
       <S.variables>
         <p>{time.stringDay}</p>
         <S.subVariables>

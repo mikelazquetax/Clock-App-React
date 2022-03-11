@@ -13,4 +13,15 @@ export const SFtitle = styles.h1`
         font-size: 20px;
         margin-left: 20px
     }
+
+
     `
+export const SFButton = styles.button`
+color:yellow;
+cursor:pointer;
+margin: 5px;
+padding:5px;
+border: 2px solid;
+border-color:white
+`
+
