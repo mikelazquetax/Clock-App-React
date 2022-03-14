@@ -45,7 +45,7 @@ export default function Clock() {
       case 6:
         time.stringDay = "Sat";
         break;
-      case 7:
+      case 0:
         time.stringDay = "Sun";
         break;
 
@@ -78,7 +78,6 @@ export default function Clock() {
   return (
 
     <S.currentTime>
-
       <S.variables>
         <p>{time.stringDay}</p>
         <S.subVariables>

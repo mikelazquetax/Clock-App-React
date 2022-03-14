@@ -1,13 +1,26 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import * as S from './styles';
+import { useParams } from 'react-router-dom';
 
 export default function Weather() {
     const api = {
-        key: "59a4048924f37ac92d98e730c73d3993",
+        key: "2f62d1d3c6132ab09c50ba986374b055",
         base: "https://api.openweathermap.org/data/2.5/",
       };
     const [query, setQuery] = useState("");
     const [weather, setWeather] = useState({});
+
+    const { cname } = useParams()
+
+    useEffect(()=>{
+      fetch(`${api.base}weather?q=${cname}&units=metric&APPID=${api.key}`)
+      .then((res) => res.json())
+      .then(result => {
+        setWeather(result);
+        setQuery('')
+        console.log(result)
+      });
+    },[cname])
   
     const search = (evt) => {
       if (evt.key === "Enter") {

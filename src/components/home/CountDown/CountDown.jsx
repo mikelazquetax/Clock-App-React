@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import * as S from "./styles";
-import { Link } from 'react-router-dom';
+
 
 export default function CountDown() {
     const [sanFerminDays, setSanFerminDays] = useState("")
@@ -38,11 +38,7 @@ export default function CountDown() {
     
     <S.SFtitle>{sanFerminDays}</S.SFtitle>
     
-    <Link to={`/Weather`}>
-    <S.SFButton>
-      Check Wheater
-      </S.SFButton>
-    </Link>
+  
     
     </S.SFstyles>
   )
